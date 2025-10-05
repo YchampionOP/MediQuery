@@ -1,0 +1,57 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Medical-specific styling */
+.medical-term {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.medical-code {
+  font-family: 'Courier New', monospace;
+  background-color: var(--bg-tertiary);
+  padding: 2px 4px;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+}
+
+.severity-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: var(--spacing-xs);
+}
+
+.severity-low {
+  background-color: var(--success-color);
+}
+
+.severity-medium {
+  background-color: var(--warning-color);
+}
+
+.severity-high {
+  background-color: var(--error-color);
+}
+
+.trend-up {
+  color: var(--error-color);
+}
+
+.trend-down {
+  color: var(--success-color);
+}
+
+.trend-stable {
+  color: var(--text-secondary);
+}

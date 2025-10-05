@@ -1,0 +1,180 @@
+/* MedicalCharts.css */
+.medical-chart {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.chart-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.chart-title-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.chart-title-section h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+
+.time-range {
+  font-size: 0.875rem;
+  color: #666;
+  background: #f8f9fa;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.chart-description {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.chart-container {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.custom-tooltip {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tooltip-label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #333;
+}
+
+.custom-tooltip p {
+  margin: 0.125rem 0;
+  font-size: 0.875rem;
+}
+
+.patient-education-note {
+  background: #e8f5e8;
+  border: 1px solid #c8e6c9;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.education-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.patient-education-note p {
+  margin: 0;
+  color: #2e7d32;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.chart-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.data-points {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chart-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.export-btn,
+.share-btn {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  padding: 0.375rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: #555;
+  transition: all 0.2s ease;
+}
+
+.export-btn:hover,
+.share-btn:hover {
+  background: #e9ecef;
+  color: #333;
+}
+
+/* Chart-specific styles */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: #f0f0f0;
+}
+
+.recharts-tooltip-wrapper {
+  z-index: 1000;
+}
+
+.recharts-legend-wrapper {
+  padding-top: 1rem;
+}
+
+/* Normal range area styling */
+.recharts-area-area {
+  fill-opacity: 0.1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .medical-chart {
+    padding: 1rem;
+  }
+  
+  .chart-title-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .chart-footer {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .chart-actions {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .export-btn,
+  .share-btn {
+    flex: 1;
+    text-align: center;
+  }
+}

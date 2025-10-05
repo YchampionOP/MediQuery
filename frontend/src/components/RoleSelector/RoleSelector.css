@@ -1,0 +1,170 @@
+.role-selector {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-xl);
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+}
+
+.role-selector-title {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-primary);
+}
+
+.role-selector-description {
+  font-size: var(--text-lg);
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.role-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.role-option {
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-align: left;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.role-option:hover {
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.role-option:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.role-option.clinician:hover {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%);
+}
+
+.role-option.patient:hover {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(245, 158, 11, 0.05) 100%);
+}
+
+.role-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-lg);
+  color: var(--primary-color);
+}
+
+.role-content h3 {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-primary);
+}
+
+.role-content p {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-lg);
+  line-height: var(--leading-relaxed);
+}
+
+.role-features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.role-features li {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+  padding-left: var(--spacing-lg);
+  position: relative;
+}
+
+.role-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-weight: 600;
+}
+
+.role-selector-footer {
+  text-align: center;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--border-color);
+}
+
+.disclaimer {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .role-selector {
+    padding: var(--spacing-lg);
+  }
+  
+  .role-options {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .role-option {
+    min-height: auto;
+    padding: var(--spacing-lg);
+  }
+  
+  .role-selector-title {
+    font-size: var(--text-2xl);
+  }
+  
+  .role-selector-description {
+    font-size: var(--text-base);
+  }
+  
+  .role-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .role-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .role-selector {
+    padding: var(--spacing-md);
+  }
+  
+  .role-option {
+    padding: var(--spacing-md);
+  }
+}
